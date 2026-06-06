@@ -1,5 +1,5 @@
 
-# Chess Adventure ♟️
+ Chess 
 
 A Python-based chess game designed to run smoothly in Kaggle notebooks without requiring ipywidgets. The project provides a visual chessboard, move validation, move history tracking, and an easy-to-use interface for playing chess directly within a notebook environment.
 
