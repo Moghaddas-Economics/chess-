@@ -32,3 +32,37 @@ part 3: pawn and knight movement
 | **Pawn Capture**        | Captures one square diagonally to the left or right.                                      |
 | **Knight**              | Moves in an L-shape (2 squares in one direction and 1 square perpendicular).              |
 | **Knight Special Rule** | Can jump over other pieces and only cannot land on a square occupied by a friendly piece. |
+
+part 5: rook, bishop and queen movement 
+
+| `(dr, dc)` | Direction |
+| ---------- | --------- |
+| `(0, 1)`   | Right →   |
+| `(0, -1)`  | Left ←    |
+| `(1, 0)`   | Down ↓    |
+| `(-1, 0)`  | Up ↑      |
+
+| `(dr, dc)` | Direction    |
+| ---------- | ------------ |
+| `(1,1)`    | Down-right ↘ |
+| `(1,-1)`   | Down-left ↙  |
+| `(-1,1)`   | Up-right ↗   |
+| `(-1,-1)`  | Up-left ↖    |
+
+#### Queen Movement Directions
+
+The queen combines the movement capabilities of the rook and the bishop. Therefore, it can move horizontally, vertically, and diagonally in any direction until it reaches the edge of the board or encounters another piece.
+
+| `(dr, dc)` | Direction    | Description                    |
+| ---------- | ------------ | ------------------------------ |
+| `(0, 1)`   | → Right      | Move horizontally to the right |
+| `(0, -1)`  | ← Left       | Move horizontally to the left  |
+| `(1, 0)`   | ↓ Down       | Move vertically downward       |
+| `(-1, 0)`  | ↑ Up         | Move vertically upward         |
+| `(1, 1)`   | ↘ Down-right | Move diagonally down and right |
+| `(1, -1)`  | ↙ Down-left  | Move diagonally down and left  |
+| `(-1, 1)`  | ↗ Up-right   | Move diagonally up and right   |
+| `(-1, -1)` | ↖ Up-left    | Move diagonally up and left    |
+
+For each of these eight directions, the program repeatedly moves one square at a time using a `while` loop. The queen continues moving until it reaches the edge of the board, encounters one of its own pieces, or captures an opponent's piece.
+
