@@ -22,3 +22,13 @@ part 2: helper functions and move prepration
 | `square_to_position(square)`   | Converts chess notation (e.g., `e2`) into array coordinates.              |
 | `position_to_square(row, col)` | Converts array coordinates back into chess notation.                      |
 | `get_moves(board, row, col)`   | Starts the process of calculating all legal moves for the selected piece. |
+
+part 3: pawn and knight movement
+
+| Piece                   | Movement Rule                                                                             |
+| ----------------------- | ----------------------------------------------------------------------------------------- |
+| **Pawn**                | Moves forward one square if empty.                                                        |
+| **Pawn (first move)**   | May move forward two squares from its starting position if both squares are empty.        |
+| **Pawn Capture**        | Captures one square diagonally to the left or right.                                      |
+| **Knight**              | Moves in an L-shape (2 squares in one direction and 1 square perpendicular).              |
+| **Knight Special Rule** | Can jump over other pieces and only cannot land on a square occupied by a friendly piece. |
