@@ -65,4 +65,51 @@ The queen combines the movement capabilities of the rook and the bishop. Therefo
 | `(-1, -1)` | ↖ Up-left    | Move diagonally up and left    |
 
 For each of these eight directions, the program repeatedly moves one square at a time using a `while` loop. The queen continues moving until it reaches the edge of the board, encounters one of its own pieces, or captures an opponent's piece.
+| Piece  | Directions                | Maximum Distance        |
+| ------ | ------------------------- | ----------------------- |
+| Rook   | 4 (horizontal & vertical) | Unlimited until blocked |
+| Bishop | 4 diagonals               | Unlimited until blocked |
+| Queen  | 8 directions              | Unlimited until blocked |
+part 6: king movement
 
+| `(dr, dc)` | Direction    |
+| ---------- | ------------ |
+| `(-1, -1)` | Up-left ↖    |
+| `(-1, 0)`  | Up ↑         |
+| `(-1, 1)`  | Up-right ↗   |
+| `(0, -1)`  | Left ←       |
+| `(0, 1)`   | Right →      |
+| `(1, -1)`  | Down-left ↙  |
+| `(1, 0)`   | Down ↓       |
+| `(1, 1)`   | Down-right ↘ |
+
+part 7: initialization and chessboard disply
+
+| Variable          | Initial Value    | Purpose                                          |
+| ----------------- | ---------------- | ------------------------------------------------ |
+| `self.board`      | `create_board()` | Creates the initial chessboard.                  |
+| `self.white_turn` | `True`           | Indicates that White moves first.                |
+| `self.history`    | `[]`             | Stores all moves played during the game.         |
+| `self.last_from`  | `None`           | Records the starting square of the last move.    |
+| `self.last_to`    | `None`           | Records the destination square of the last move. |
+
+part 9: appearance and layout 
+
+| Property            | Purpose                              |
+| ------------------- | ------------------------------------ |
+| `width`, `height`   | Sets the size of the labels.         |
+| `background: white` | Gives the labels a white background. |
+| `color: black`      | Displays the text in black.          |
+| `font-size: 14px`   | Uses a readable font size.           |
+| `font-weight: bold` | Makes the labels stand out.          |
+
+
+part 10: movement 
+
+| Method                                 | Purpose                                      |
+| -------------------------------------- | -------------------------------------------- |
+| `show_moves(square)`                   | Shows possible moves for one selected piece. |
+| `move(from_square, to_square)`         | Moves a piece if the move is legal.          |
+| `reset()`                              | Restarts the chess game.                     |
+| `game = ChessGame()`                   | Creates a new chess game object.             |
+| `game.show_board("White goes first.")` | Displays the first board.                    |
